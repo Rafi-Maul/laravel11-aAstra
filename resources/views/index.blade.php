@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app" class="flex h-screen">
-        <aside id="sidebar" class="bg-slate-50 text-gray-900 w-64 h-full fixed lg:relative transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-30">
+        <aside id="sidebar" class="bg-slate-50 text-gray-900 w-64 h-screen fixed lg:relative transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-30">
             @include('components.sidebar')
         </aside>
         <div class="flex flex-col flex-grow transition-all duration-300" id="main-content">
