@@ -5,7 +5,6 @@
     body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    padding: 20px;
   }
 
   .form-container {
@@ -70,62 +69,47 @@
 
 
 <section>
-    <div class="flex justify-center">
-        <div class="sm:hidden">
+  <div class="flex justify-center">
+      <div class="sm:hidden">
           <label for="Tab" class="sr-only">Tab</label>
-      
           <select id="Tab" class="w-full rounded-md border-gray-200">
-            <option>Settings</option>
-            <option>Messages</option>
-            <option>Archive</option>
-            <option selected>Notifications</option>
+              <option value="administrasi" {{ $tab == 'administrasi' ? 'selected' : '' }}>Administrasi</option>
+              <option value="program" {{ $tab == 'program' ? 'selected' : '' }}>Program</option>
+              <option value="hubungan" {{ $tab == 'hubungan' ? 'selected' : '' }}>Hubungan</option>
           </select>
-        </div>
-      
-        <div class="hidden sm:block">
-          <div class="border-b border-gray-200">
-            <nav id="tabNav" class="-mb-px flex gap-3">
-              <a href="#" class="tab-link shrink-0 border border-transparent p-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-                Hubungan DKM dengan YAA
-              </a>
-      
-              <a href="#" class="tab-link shrink-0 border border-transparent text-wrap p-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-                Hubungan Manajemen Perusahaan dengan DKM & Jamaah
-              </a>
-      
-              <a href="#" class="tab-link shrink-0 border border-transparent p-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-                Program Sosial
-              </a>
-      
-              <a href="#" class="tab-link shrink-0 border border-transparent p-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-                Administrasi dan Keuangan Sosial
-              </a>
+      </div>
 
-              <a href="#" class="tab-link shrink-0 rounded-t-lg border border-gray-300 border-b-white p-3 text-sm font-medium text-sky-600">
-                Peribah dan Infrastruktur
-              </a>
-            </nav>
+      <div class="hidden sm:block">
+          <div class="border-b border-gray-200">
+              <nav id="tabNav" class="-mb-px flex gap-3">
+                <a href="{{ route('form.show.tab', 'hubungan') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'hubungan' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                    Hubungan DKM dengan YAA
+                </a>
+                <a href="{{ route('form.show.tab', 'hmanajemen') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'hmanajemen' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                    Hubungan Manajemen Perusahaan dengan DKM & Jamaah
+                </a>
+                <a href="{{ route('form.show.tab', 'administrasi') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'administrasi' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                    Administrasi
+                </a>
+                <a href="{{ route('form.show.tab', 'program') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'program' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                    Program
+                </a>
+              </nav>
           </div>
-        </div>
-    </div>
-      
-    <a href="#" class="block rounded-lg p-4 mb-5 shadow-sm shadow-indigo-100">
-        <div class="flex flex-row items-center justify-between rounded-lg p-4 shadow-md mb-10">
-            <img src="{{ asset('img/logo1.jpg') }}" alt="Deskripsi Gambar" class="w-40" style="heigh:200px">
-            <img src="{{ asset('img/new1.png') }}" alt="Deskripsi Gambar" class="w-40" style="heigh:200px">
-            <img src="{{ asset('img/logo3.jpeg') }}" alt="Deskripsi Gambar" class="w-40" style="heigh:200px">
-            <img src="{{ asset('img/new2.png') }}" alt="Deskripsi Gambar" class="w-40" style="heigh:200px">
-        </div>
-        <div class="flex justify-center">
-            <img
-              alt=""
-              src="{{ asset('img/center.png') }}"
-              class=" w-3/4 rounded-md "
-            />
-        </div>
-        <p class="font-semibold mt-5">Mulai Mengisi</p>
-        <p class="mb-5">Isilah dengan data dan informasi yang benar serta dapat dipertanggungjawabkan</p>
-      </a>
+      </div>
+  </div>
+  
+  <div>
+      @if($tab == 'administrasi')
+          @include('pages.form.administrasi')
+      @elseif($tab == 'program')
+          @include('pages.form.program')
+      @elseif($tab == 'hubungan')
+          @include('pages.form.hubungan')
+      @elseif($tab == 'hmanajemen')
+          @include('pages.form.hmanajemen')
+      @endif
+  </div>
 </section>
 <script src="script/js">
  const navLinkEls = document.querySelectorAll('.tab-link');

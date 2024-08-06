@@ -5,7 +5,6 @@
     body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    padding: 20px;
   }
 
   .form-container {
