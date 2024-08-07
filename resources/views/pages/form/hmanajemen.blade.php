@@ -124,6 +124,9 @@
             </div>
         </div>
 
-        <button type="submit" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">Kirim</button>
+        <div>
+            <a href="{{ route('form.show.tab', 'program') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md shadow-md"><i class="bi bi-arrow-left"></i>&nbsp; Sebelumnya</a>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 shadow-md">Selanjutnya &nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>    
     </form>
 </div>

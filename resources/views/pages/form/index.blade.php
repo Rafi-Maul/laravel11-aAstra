@@ -88,11 +88,14 @@
                 <a href="{{ route('form.show.tab', 'hmanajemen') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'hmanajemen' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
                     Hubungan Manajemen Perusahaan dengan DKM & Jamaah
                 </a>
-                <a href="{{ route('form.show.tab', 'administrasi') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'administrasi' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
-                    Administrasi
-                </a>
                 <a href="{{ route('form.show.tab', 'program') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'program' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
-                    Program
+                  Program Sosial
+                </a>
+                <a href="{{ route('form.show.tab', 'administrasi') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'administrasi' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                  Administrasi dan Keuangan
+                </a>
+                <a href="{{ route('form.show.tab', 'infrastruktur') }}" class="tab-link shrink-0 p-3 text-sm font-medium text-gray-500 hover:text-gray-700 {{ $tab == 'infrastruktur' ? 'text-sky-600 border-b-2 border-sky-600' : '' }}">
+                  Peribadahan dan Infrastruktur
                 </a>
               </nav>
           </div>

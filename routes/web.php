@@ -10,7 +10,7 @@ Route::get('/', function () {
 Route::get('formulir', [FormController::class, 'show'])->name('form.show');
 
 Route::get('formulir/{tab}', [FormController::class, 'show'])
-    ->where('tab', 'hubungan|hmanajemen|administrasi|program')
+    ->where('tab', 'hubungan|hmanajemen|program|administrasi|infrastruktur')
     ->name('form.show.tab');
 
 

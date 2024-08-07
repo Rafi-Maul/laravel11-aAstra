@@ -12,7 +12,7 @@ class FormController extends Controller
         $tab = $tab ?: 'hubungan';
 
         // Check if the tab matches one of the allowed tabs
-        if (!in_array($tab, ['hubungan', 'hmanajemen', 'administrasi', 'program'])) {
+        if (!in_array($tab, ['hubungan', 'hmanajemen', 'program','administrasi','infrastruktur'])) {
             abort(404);
         }
 

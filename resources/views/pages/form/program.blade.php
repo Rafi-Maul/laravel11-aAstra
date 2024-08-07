@@ -122,7 +122,7 @@
     </form>
 </div>
 
-<div class="mt-5 max-w-4xl mx-auto p-6 bg-white rounded-md">
+<div class="mt-5 max-w-4xl mx-auto p-6 bg-white rounded-md shadow-md">
     <form>
         <h2 class="text-xl font-semibold mb-10">Improvement</h2>
 
@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <div class="mb-10">
+        <div class="mb-5">
             <label class="block text-gray-700 mb-2">
                 Jelaskan dengan Sebutkan Program yang sesuai dengan Astra Sustainability Aspiration
             </label>
@@ -168,6 +168,11 @@
         <div class="mb-10">
             <label class="block text-gray-700 mb-2">Upload dokumen, poster, foto screen shoot dan lain-lain yang menunjukkan bukti Astra Sustainability Aspiration</label>
             <input type="file" name="dokumen" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border file:border-gray-300 file:rounded file:text-sm file:font-semibold file:bg-gray-50 hover:file:bg-gray-100">
+        </div>
+
+        <div>
+            <a href="{{ route('form.show.tab', 'program') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md shadow-md"><i class="bi bi-arrow-left"></i>&nbsp; Sebelumnya</a>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 shadow-md">Selanjutnya &nbsp;<i class="bi bi-arrow-right"></i></a>
         </div>
     </form>
 </div>
