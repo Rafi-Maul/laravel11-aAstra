@@ -111,6 +111,8 @@
           @include('pages.form.hubungan')
       @elseif($tab == 'hmanajemen')
           @include('pages.form.hmanajemen')
+      @elseif($tab == 'infrastruktur')
+          @include('pages.form.infrastruktur')
       @endif
   </div>
 </section>
